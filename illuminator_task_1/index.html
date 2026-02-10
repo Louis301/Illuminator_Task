@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./style.css">
+	<title>Каталог товаров</title>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h1>Каталог товаров</h1>
+		</header>
+		<div class="filters">
+			<button class="filter-btn active" data-category="all">Все категории</button>
+			<button class="filter-btn" data-category="electronics">Электроника</button>
+			<button class="filter-btn" data-category="clothing">Одежда</button>
+			<button class="filter-btn" data-category="home">Дом</button>
+			<button class="filter-btn" data-category="books">Книги</button>
+		</div>
+		<div class="products-grid" id="productsGrid">
+			<!-- добавляется через JavaScript -->
+		</div>
+		<div class="pagination" id="pagination">
+			<!-- добавляется через через JavaScript -->
+		</div>
+	</div>
+	<script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Форма обратной связи</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Форма обратной связи</h1>
+    <form id="feedbackForm" novalidate>
+      <!-- Скрытое поле для CSRF защиты -->
+      <input type="hidden" name="csrf_token" id="csrfToken">
+      <div class="form-group">
+        <label for="name">Имя *</label>
+        <input type="text" id="name" name="name" required>
+        <div class="error" id="nameError">Пожалуйста, введите ваше имя</div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required>
+        <div class="error" id="emailError">Пожалуйста, введите корректный email</div>
+      </div>
+      <div class="form-group">
+        <label for="phone">Телефон (необязательно)</label>
+        <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__">
+        <div class="error" id="phoneError">Пожалуйста, введите корректный номер телефона</div>
+      </div>
+      <div class="form-group">
+        <label for="subject">Тема обращения *</label>
+        <select id="subject" name="subject" required>
+          <option value="">Выберите тему</option>
+          <option value="question">Вопрос</option>
+          <option value="order">Заказ</option>
+          <option value="error">Ошибка</option>
+        </select>
+        <div class="error" id="subjectError">Пожалуйста, выберите тему обращения</div>
+      </div>
+      <div class="form-group">
+        <label for="message">Сообщение *</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        <div class="error" id="messageError">Пожалуйста, введите сообщение</div>
+      </div>
+      <div class="checkbox-group">
+        <input type="checkbox" id="consent" name="consent" required>
+        <label for="consent">Согласен на обработку персональных данных *</label>
+      </div>
+      <div class="error" id="consentError">Необходимо согласие на обработку персональных данных</div>
+      <button type="submit" id="submitBtn">Отправить</button>
+      <div class="message" id="formMessage"></div>
+    </form>
+  </div>
+  <!-- Подключение логики JS -->
+  <script src="./script.js"></script>
+</body>
+</html>
