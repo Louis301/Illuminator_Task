@@ -147,6 +147,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const formData = new FormData(this);
                 formData.append('action', 'submit_feedback');
                 
+                // для вордпресса
                 const response = await fetch(feedback_ajax.ajax_url, {
                     method: 'POST',
                     body: formData
