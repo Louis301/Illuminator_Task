@@ -11,10 +11,7 @@
 - apache24 запускал как службу Windows
 
 ## Задание 3
-1. Установил:
-  mysql-8.4.8
-  phpMyAdmin-5.2.3
-  wordpress-6.9.1
+1. Установил  mysql-8.4.8, phpMyAdmin-5.2.3 и wordpress-6.9.1
 
 2. Создал сайт illuminator_task_3 и отдельную тему на Wordpress
 
